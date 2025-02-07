@@ -8,6 +8,11 @@ class GreetController extends Controller
 {
     public function show()
     {
-        return view('greet', ['name' => 'John Ronald']);
+        return view('greet');
+    }
+
+    public function greet($name)
+    {
+        return view('greet', ['name' => $name]);
     }
 }
