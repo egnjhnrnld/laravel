@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <span class="text-xl font-semibold text-gray-800">Laravel App</span>
+                <div class="space-x-6">
+                    <a href="/" class="text-gray-600 hover:text-gray-900 transition-colors">Home</a>
+                    <a href="/greet" class="text-gray-600 hover:text-gray-900 transition-colors">Greet</a>
+                    <a href="/tasks" class="text-blue-600 font-medium">Tasks</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold mb-6">Task Manager</h1>
 
